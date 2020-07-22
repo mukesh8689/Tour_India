@@ -1,19 +1,47 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { createAppContainer,createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import {createBottomTabNavigator} from 'react-navigation-tabs';  
+import Page from './screens/Page'
+import SecondScreen from './screens/SecondScreen'
+import ResultScreen from './screens/ResultScreen'
+import GalleryScreen from './screens/GallerySccreen'
+import SignupScreen from './screens/SignupScreen';
+import SigninScreen from './screens/SigninScreen';
+import TaskCreateScreen from './screens/TaskCreateScreen';
+import AccountScreen from './screens/AccountScreen';
+import { setNavigator} from './screens/NavigationRef';
+import {Provider as AuthProvider}  from './screens/context/AuthContext';
+import {Provider as TaskProvider} from './screens/context/TaskContext';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
+const switchNavigator=createSwitchNavigator({
+mainFlow:createStackNavigator({
+  
+  Second :SecondScreen,
+     PageScreen:Page,
+    
+     Result:ResultScreen,
+      Gallery:GalleryScreen,
+      Signup:SignupScreen,
+      Signin:SigninScreen
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+}),
+uploadFlow:createBottomTabNavigator({
+  TaskCreate:TaskCreateScreen,
+  Account:AccountScreen
+})
+
 });
+
+const App= createAppContainer(switchNavigator);
+        
+export default ()=>{
+return (
+
+      <TaskProvider>
+     <AuthProvider>
+         <App  ref={(navigator)=>setNavigator(navigator)}/>
+          </AuthProvider>
+          </TaskProvider>);
+
+}
