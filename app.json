@@ -2,7 +2,7 @@
   "expo": {
     "name": "tourist",
     "slug": "tourist",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "sdkVersion":"37.0.0",
     "icon": "./assets/icon.png",
@@ -19,7 +19,7 @@
     ],
    "android": {
       "package": "com.yourcompany.tourist",
-      "versionCode": 1
+      "versionCode": 2
     }
   }
 }
