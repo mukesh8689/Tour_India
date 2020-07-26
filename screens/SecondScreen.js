@@ -4,14 +4,21 @@ import {Card,Title} from 'react-native-paper'
 import Cards from './components/card'
 const SecondScreen =({navigation})=>{
 
-    const url1="https://api.jsonbin.io/b/5edb542b655d87580c44d53f"
-    const url2="https://api.jsonbin.io/b/5edb54842f5fd957fda4d157"
-    const url3="https://api.jsonbin.io/b/5edb54e6655d87580c44d572"
-    const url4="https://api.jsonbin.io/b/5edb588d1f9e4e578818523f"
-    const url5="https://api.jsonbin.io/b/5edb556f655d87580c44d59a"
-    const url6="https://api.jsonbin.io/b/5edb55b2655d87580c44d5ad"
-    const url7="https://api.jsonbin.io/b/5edb55ee2f5fd957fda4d1bc"
-    const url8="https://api.jsonbin.io/b/5edb56331f9e4e578818514b"
+    const url1="https://api.jsonbin.io/b/5eaaa8c64c87c3359a643e12"
+
+    const url2="https://api.jsonbin.io/b/5ea830714c87c3359a6327dd"
+
+    const url3="https://api.jsonbin.io/b/5eaab41f66e603359fe13bb6"
+
+    const url4="https://api.jsonbin.io/b/5eaab96f07d49135ba4835c9"
+
+    const url5="https://api.jsonbin.io/b/5eaae4f866e603359fe152b1"
+
+    const url6="https://api.jsonbin.io/b/5eaaea294c87c3359a645cba"
+
+    const url7="https://api.jsonbin.io/b/5eaaef8b66e603359fe158c5"
+    
+    const url8="https://api.jsonbin.io/b/5eaafbdd07d49135ba485724"
 
     const link1 = "https://www.holidify.com/images/cmsuploads/compressed/1831_20190228134108.jpg";
     const link2= "https://www.holidify.com/images/bgImages/LAKSHADWEEP-ISLANDS.jpg";
